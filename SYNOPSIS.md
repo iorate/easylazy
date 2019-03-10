@@ -241,7 +241,7 @@ namespace easylazy {
 
 `thunk<list_rep<T>>`, a.k.a. `list<T>`, represents a lazy list of type `[T]`. It provides constructors receiving a range, and a lazy subscript operator.
 
-```
+```cpp
 template <class Range> explicit thunk(Range &&r);
 ```
 
@@ -257,7 +257,7 @@ list<int_> xs(v);
 
 -- end example]
 
-```
+```cpp
 template <class U> explicit thunk(std::initializer_list<U> il);
 ```
 
@@ -272,7 +272,7 @@ list<int_> xs{1, 2, 3};
 
 -- end example]
 
-```
+```cpp
 template <class Container> Container get_as() const;
 ```
 
@@ -288,7 +288,7 @@ std::cout << hello.get_as<std::string>() << std::endl;
 
 -- end example]
 
-```
+```cpp
 T operator[](int_ n) const;
 ```
 

@@ -341,7 +341,7 @@ inline function<R (Args...)> operator*(function_helper<void (Args...)>, F &&f) {
 } // namespace detail {
 
 #define EASYLAZY_FUNCTION(...)                                                 \
-    ::easylazy::detail::function_helper<void (__VA_ARGS__)>() * [=](__VA_ARGS__) \
+::easylazy::detail::function_helper<void (__VA_ARGS__)>() * [=](__VA_ARGS__)   \
 /**/
 
 // Operators
