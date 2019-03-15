@@ -198,7 +198,7 @@ namespace easylazy {
 
         explicit operator bool() const;
 
-        template <class ...Args> R operator()(Args ...args) const;
+        R operator()(Args ...args) const;
     };
 }
 ```
@@ -206,7 +206,7 @@ namespace easylazy {
 `thunk<std::function<R (Args...)>>`, a.k.a. `function<R (Args...)>`, represents a lazy function of type `(Args...) -> R`. It provides a lazy function-call operator.
 
 ```cpp
-template <class ...Args> R operator()(Args ...args) const;
+R operator()(Args ...args) const;
 ```
 
 Returns: A thunk of type `R` initialized with a computation `get()(args...)` to be lazily evaluated.
